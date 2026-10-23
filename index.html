@@ -20,7 +20,7 @@ function parseCSV(text){let rows=[],row=[],v='',quote=false;for(let i=0;i<text.l
 
 const SHEET_LINK='https://docs.google.com/spreadsheets/d/1DixWa79scXUArhq5fJD4kMJDep0eNHmvZTsyLbMyns8/edit#gid=0';
 // COLE ABAIXO A URL DE IMPLANTAÇÃO /exec DO APPS SCRIPT
-const PUBLIC_API_URL='COLE_AQUI_URL_DO_APPS_SCRIPT_EXEC';
+const PUBLIC_API_URL='https://script.google.com/macros/s/AKfycbxFg-fRKJ6ct4hanJJsifjAyCzuj050CDEk_tJh7S2xKb8MdDv_z0brKaJi6qp1x1--/exec';
 function setSyncState(message,active){const el=$('syncState');el.textContent=message;el.className='sync-status '+(active?'online':'error')}
 function recordUrl(r){if(r.row&&Number.isFinite(+r.row))return SHEET_LINK+'&range=A'+Math.floor(+r.row);return SHEET_LINK}
 function datePt(iso){if(/^\d{4}-\d\d-\d\d$/.test(iso||'')){let p=iso.split('-');return p[2]+'/'+p[1]+'/'+p[0]}return iso||'—'}
